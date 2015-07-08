@@ -1,0 +1,30 @@
+{
+  "name": "osx-screensaver",
+  "version": "1.0.0",
+  "description": "Start the screensaver on OS X systems.",
+  "license": "MIT",
+  "repository": "gillstrom/osx-screensaver",
+  "author": {
+    "email": "andreasgillstrom@gmail.com",
+    "name": "Andreas Gillström",
+    "url": "github.com/gillstrom"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "mac",
+    "osx",
+    "screen saver",
+    "screensaver"
+  ],
+  "devDependencies": {
+    "ava": "^0.0.4"
+  }
+}
