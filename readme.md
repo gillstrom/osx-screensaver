@@ -15,7 +15,7 @@ $ npm install --save osx-screensaver
 ```js
 var osxScreensaver = require('osx-screensaver');
 
-osxScreensaver(function (err) {
+osxScreensaver().then(() => {
 	console.log('Screensaver started');
 });
 ```

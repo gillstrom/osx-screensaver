@@ -24,6 +24,10 @@
     "screen saver",
     "screensaver"
   ],
+  "dependencies": {
+    "pify": "^2.2.0",
+    "pinkie-promise": "^1.0.0"
+  },
   "devDependencies": {
     "ava": "^0.2.0",
     "xo": "*"

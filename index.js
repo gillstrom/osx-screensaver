@@ -1,9 +1,11 @@
 'use strict';
 var execFile = require('child_process').execFile;
+var pify = require('pify');
+var Promise = require('pinkie-promise');
 
-module.exports = function (cb) {
+module.exports = function () {
 	if (process.platform !== 'darwin') {
-		throw new Error('Only OS X systems are supported');
+		Promise.reject(new Error('Only OS X systems are supported'));
 	}
 
 	var cmd = 'open';
@@ -12,12 +14,5 @@ module.exports = function (cb) {
 		'ScreenSaverEngine'
 	];
 
-	execFile(cmd, args, function (err) {
-		if (err) {
-			cb(err);
-			return;
-		}
-
-		cb();
-	});
+	return pify(execFile, Promise)(cmd, args);
 };
