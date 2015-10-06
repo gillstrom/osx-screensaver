@@ -5,7 +5,7 @@ var Promise = require('pinkie-promise');
 
 module.exports = function () {
 	if (process.platform !== 'darwin') {
-		Promise.reject(new Error('Only OS X systems are supported'));
+		return Promise.reject(new Error('Only OS X systems are supported'));
 	}
 
 	var cmd = 'open';
