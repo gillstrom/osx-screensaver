@@ -10,8 +10,7 @@ module.exports = function () {
 
 	var cmd = 'open';
 	var args = [
-		'-a',
-		'ScreenSaverEngine'
+		'/System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app'
 	];
 
 	return pify(execFile, Promise)(cmd, args);
